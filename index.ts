@@ -14,7 +14,7 @@ function hashString(s: string) {
  * @param s the string
  * @returns hue value
  */
-export function getHue(s: string) {
+export function getHue(s: string): number {
     return Math.abs(hashString(s)) % 360;
 }
 
@@ -23,6 +23,6 @@ export function getHue(s: string) {
  * @param s the string
  * @returns hsl(hue of the string, 50%, 90%)
  */
-export function getLightColor(s: string) {
+export function getLightColor(s: string): string {
     return `hsl(${getHue(s)}, 50%, 90%)`;
 }
